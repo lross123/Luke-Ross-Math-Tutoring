@@ -1,0 +1,277 @@
+/*
+  Custom styles for Luke's Maths Tutoring website
+
+  This stylesheet defines a modern, clean design suitable for a tutoring
+  business. It uses a calming blue colour palette with subtle accents to
+  reinforce trust and professionalism. Layouts are responsive and
+  optimised for readability on both desktop and mobile devices.
+*/
+
+:root {
+  /* Primary colours used throughout the site */
+  --primary: #0b3c5d;       /* deep navy blue for headers and footer */
+  --secondary: #1d6996;     /* mid‑tone blue for hover states and accents */
+  --accent: #da7b93;        /* soft pink accent for call‑to‑action buttons */
+  --light: #f5f7fa;         /* very light grey for section backgrounds */
+  --text: #333333;          /* dark grey for body text */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  background-color: var(--light);
+  color: var(--text);
+}
+
+/* Header and navigation */
+header {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.5rem 0;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  padding-bottom: 0.25rem;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+.nav .active {
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Generic container with max width */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+/* Hero section styles */
+.hero {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin: 0.25rem;
+}
+
+.btn:hover {
+  background-color: var(--secondary);
+}
+
+/* Cards and grids */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+/* Specific card styles for services */
+.service-card h3 {
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.service-card p {
+  margin-bottom: 0.5rem;
+}
+
+.service-card .price {
+  font-size: 1.3rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+/* About features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.feature {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.feature h4 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Qualifications list */
+.qualifications {
+  margin-top: 1rem;
+}
+
+.qualifications .edu-card,
+.qualifications .cert-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.qualifications h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+}
+
+.qualifications .date-range {
+  font-style: italic;
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+.qualifications .details p,
+.qualifications .details ul {
+  margin-bottom: 0.5rem;
+}
+
+.qualifications .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.qualifications .tag {
+  background-color: var(--secondary);
+  color: #fff;
+  border-radius: 15px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+/* Contact page */
+.contact-info {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-info h3 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.contact-info p {
+  margin-bottom: 0.75rem;
+}
+
+.contact-info a {
+  color: var(--secondary);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.contact-info a:hover {
+  color: var(--accent);
+}
+
+footer {
+  background-color: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
